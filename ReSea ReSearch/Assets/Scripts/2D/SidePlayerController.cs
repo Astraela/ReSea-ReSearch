@@ -8,7 +8,7 @@ public class SidePlayerController : MonoBehaviour
     public KeyCode left = KeyCode.A;
     public KeyCode right = KeyCode.D;
 
-    public float Speed = 5;
+    public float speed = 5;
 
     private KeyCode currentDirection = KeyCode.None;
     private Rigidbody2D rb;
@@ -32,6 +32,17 @@ public class SidePlayerController : MonoBehaviour
             currentDirection = Input.GetKey(left) ? left : KeyCode.None;
         }
 
-        rb.velocity = Vector2.left * (currentDirection == left ? 1 : (currentDirection == right ? -1 : 0)) * Speed;
+        Vector2 angle = Vector2.right;
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position,Vector2.down,.71f,7);
+        if(hit){
+            rb.gravityScale = 0;
+            angle = new Vector2(hit.normal.y,-hit.normal.x);
+        }else{
+            rb.gravityScale = 20;
+        }
+
+        Vector2 input = angle * (currentDirection == left ? -1 : (currentDirection == right ? 1 : 0)) * speed;
+        rb.velocity = input;
     }
 }
