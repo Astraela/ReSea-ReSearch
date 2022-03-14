@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BoatMoment.unity
+    path: Assets/Scenes/TestingScenes/BoatMoment.unity
     guid: 5f01c7ec99c3027488d277354a4e9640
   - enabled: 1
     path: Assets/Scenes/LoadingScreen.unity
     guid: 0d04543d9073c244baf42846c845522d
   - enabled: 1
-    path: Assets/Scenes/3DSections/1-1.unity
+    path: Assets/Scenes/TestingScenes/3DSections/1-1.unity
     guid: b7cf31bd11833454185ce8045cb4ea64
   m_configObjects: {}
