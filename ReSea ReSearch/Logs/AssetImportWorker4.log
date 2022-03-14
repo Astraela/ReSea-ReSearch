@@ -1065,3 +1065,9 @@ Received Import Request.
   path: Assets/Prefabs/Dialogue.prefab
   artifactKey: Guid(b888084326f7f074a8027701525b061b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/Dialogue.prefab using Guid(b888084326f7f074a8027701525b061b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616cc788bc87d245e2cf7f6aab878976') in 0.072346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2535.252741 seconds.
+  path: Assets/Scenes/TestingScenes
+  artifactKey: Guid(8b2e2599352ae7c41a18c45e9e4e19aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestingScenes using Guid(8b2e2599352ae7c41a18c45e9e4e19aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47a323fea335c4847fc429dc973ee2a3') in 0.013380 seconds 
