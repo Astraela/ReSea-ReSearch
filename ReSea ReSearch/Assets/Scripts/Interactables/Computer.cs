@@ -11,7 +11,9 @@ public class Computer : BaseInteractable
 
     public override Vector3 centerOffset => _centerOffset;
     public override float range => _range;
-    public override bool interactable => _interactable;
+
+    public override bool interactable {get => _interactable; set => _interactable = value;}
+
 
     public override void Interact()
     {

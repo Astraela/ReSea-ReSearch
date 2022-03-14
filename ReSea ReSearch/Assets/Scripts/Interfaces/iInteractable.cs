@@ -5,7 +5,7 @@ using UnityEngine;
 public interface iInteractable
 {
     public Vector3 centerOffset{get;}
-    public bool interactable{get;}
+    public bool interactable{get;set;}
     public float range{get;}
     public void Interact();
 }

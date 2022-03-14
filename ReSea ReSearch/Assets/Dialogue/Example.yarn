@@ -1,0 +1,43 @@
+﻿title: Example
+tags:
+---
+<<if not visited("Example")>>
+    You: This only gets run if you haven't visited this yet
+    <<call activate("cocacola",5)>>
+    Someone: The line above this activates a component with they identifier "cocacola"
+    Anyone: The lines below this signify multiple options, the first part being the text, 2nd being what dialogue
+    
+    indentation = important!
+    -> Scream
+        [[Example.Mood]]
+    -> take the bread
+        [[Example.GetBread]]
+<<else>>
+    Example: shut the up.
+<<endif>>
+===
+
+title: Example.Mood
+tags:
+---
+You: Mood
+Also you: yep...
+You: :|
+Also you: :|
+Example: The lines under here, run the UpdateVisibility function of the identifier "Example"
+Example: Also it waits 1 seconds after hiding
+<<call hide("Example")>>
+<<wait 1>>
+<<call show("Example")>>
+===
+
+title: Example.GetBread
+tags:
+---
+you take le bread
+Example: The lines under here disables the interactability 
+<<call uninteractable("Example")>>
+<<wait 1>>
+<<call interactable("Example")>>
+
+===
