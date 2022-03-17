@@ -12,8 +12,8 @@ public class Interactee : MonoBehaviour
     bool last = false;
     void InteractPopup(bool boolean){
         if(last == boolean) return;
-        var interactPopup = ServiceDesk.instance.GetItem("InteractPopup");
-        interactPopup.SetActive(boolean);
+        GameObject interactPopup = ServiceDesk.instance.GetItem("InteractPopup");
+        interactPopup?.SetActive(boolean);
         
         last = boolean;
     }
@@ -30,6 +30,16 @@ public class Interactee : MonoBehaviour
             }
         }
         InteractPopup(currentInteractable != null);
+        if(currentInteractable != null){
+            NPC isNpc = currentInteractable as NPC;
+            if(isNpc){
+                if(isNpc.autoInteract){
+                    isNpc.Interact();
+                    isNpc.autoInteract = false;
+                    return;
+                }
+            }
+        }
         if(currentInteractable != null && Input.GetKeyUp(interactButton)){
             currentInteractable.Interact();
         }
