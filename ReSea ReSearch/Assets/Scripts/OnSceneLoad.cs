@@ -11,11 +11,12 @@ public class OnSceneLoad : MonoBehaviour
         player.GetComponent<Interactee>().enabled = false;
         if(player.GetComponent<SidePlayerController>())
             player.GetComponent<SidePlayerController>().enabled = false;
+        if(player.GetComponent<TopPlayerController>())
+            player.GetComponent<TopPlayerController>().enabled = false;
 
         var LoadingScreen = ServiceDesk.instance.GetItem("LoadingScreen").GetComponent<LoadingScreen>();
         LoadingScreen.OnLoad += OnLoad;
         LoadingScreen.FinishedLoading();
-
     }
 
     void OnLoad(){
@@ -23,5 +24,7 @@ public class OnSceneLoad : MonoBehaviour
         player.GetComponent<Interactee>().enabled = true;
         if(player.GetComponent<SidePlayerController>())
             player.GetComponent<SidePlayerController>().enabled = true;
+        if(player.GetComponent<TopPlayerController>())
+            player.GetComponent<TopPlayerController>().enabled = true;
     }
 }

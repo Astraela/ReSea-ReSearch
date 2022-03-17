@@ -600,7 +600,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3279421110385768410, guid: d46f025a260921648a4919d5fdb389da, type: 3}
       propertyPath: services.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279421110385768410, guid: d46f025a260921648a4919d5fdb389da, type: 3}
+      propertyPath: services.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 1175032839}
+    - target: {fileID: 3279421110385768410, guid: d46f025a260921648a4919d5fdb389da, type: 3}
+      propertyPath: services.Array.data[0].name
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3279421110385768411, guid: d46f025a260921648a4919d5fdb389da, type: 3}
       propertyPath: m_Name
