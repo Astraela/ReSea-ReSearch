@@ -24,7 +24,10 @@ public class ServiceDesk : MonoBehaviour
     }
 
     public GameObject GetItem(string key){
-        return services.Find(x => x.name == key)?.obj;
+        Service attempt = services.Find(x => x.name == key);
+        if(attempt == null)
+            return null;
+        return attempt.obj;
     }
 
     public void SetItem(string key, GameObject obj){

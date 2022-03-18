@@ -6,12 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestingScenes/BoatMoment.unity
-    guid: 5f01c7ec99c3027488d277354a4e9640
+    path: Assets/Scenes/StartMenu.unity
+    guid: ae4c73962f8d5024eb3ae17c9eb717e9
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 279d18d3791eaa9419a9a9790ab0d80b
+  - enabled: 1
+    path: Assets/Scenes/BoatScene.unity
+    guid: c9d08c27ea8fde14cb5ccac28d93840b
   - enabled: 1
     path: Assets/Scenes/LoadingScreen.unity
     guid: 0d04543d9073c244baf42846c845522d
   - enabled: 1
-    path: Assets/Scenes/TestingScenes/3DSections/1-1.unity
-    guid: b7cf31bd11833454185ce8045cb4ea64
+    path: Assets/Scenes/UnderwaterScene.unity
+    guid: 36483b3004474f74face69945e2eaf5c
+  - enabled: 1
+    path: Assets/Scenes/PierScene.unity
+    guid: eddc04595da31714cbad614cc54708cf
   m_configObjects: {}

@@ -48,7 +48,6 @@ public class NPC : BaseInteractable
     }
 
     IEnumerator Start () { 
-        yield return new WaitForEndOfFrame();
         DialogueHelper dialogueHelper = FindObjectOfType<DialogueHelper>();
         if(dialogueHelper.Npcs.ContainsKey(characterName)){
             show = dialogueHelper.Npcs[characterName].show;
@@ -61,5 +60,6 @@ public class NPC : BaseInteractable
             DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
                     dialogueRunner.Add(scriptToLoad);  
         }
+        yield return new WaitForEndOfFrame();
     }
 }
