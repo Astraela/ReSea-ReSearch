@@ -7,6 +7,7 @@ public class OnSceneLoad : MonoBehaviour
     
     void Start()
     {
+        if(ServiceDesk.instance.GetItem("LoadingScreen") == null) return;
         var player = ServiceDesk.instance.GetItem("Player");
         player.GetComponent<Interactee>().enabled = false;
         if(player.GetComponent<SidePlayerController>())

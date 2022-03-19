@@ -13,7 +13,8 @@ public class Interactee : MonoBehaviour
     void InteractPopup(bool boolean){
         if(last == boolean) return;
         GameObject interactPopup = ServiceDesk.instance.GetItem("InteractPopup");
-        interactPopup?.SetActive(boolean);
+        if(interactPopup != null)
+            interactPopup.SetActive(boolean);
         
         last = boolean;
     }
