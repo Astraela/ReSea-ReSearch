@@ -48,8 +48,9 @@ tags:
 title: Choice.0
 tags:
 ---
-    You can't make any choices right now.
-    speak to more NPCs
+    The dialogues aren't yet properly connected as there rest of the dialogue hasn't been finished yet
+    for now enjoy the newspaper scene
+    <<call scene(6)>>
 ===
 
 title: Choice.1

@@ -9,11 +9,13 @@ public class OnSceneLoad : MonoBehaviour
     {
         if(ServiceDesk.instance.GetItem("LoadingScreen") == null) return;
         var player = ServiceDesk.instance.GetItem("Player");
-        player.GetComponent<Interactee>().enabled = false;
-        if(player.GetComponent<SidePlayerController>())
-            player.GetComponent<SidePlayerController>().enabled = false;
-        if(player.GetComponent<TopPlayerController>())
-            player.GetComponent<TopPlayerController>().enabled = false;
+        if(player != null){
+            player.GetComponent<Interactee>().enabled = false;
+            if(player.GetComponent<SidePlayerController>())
+                player.GetComponent<SidePlayerController>().enabled = false;
+            if(player.GetComponent<TopPlayerController>())
+                player.GetComponent<TopPlayerController>().enabled = false;
+        }
 
         var LoadingScreen = ServiceDesk.instance.GetItem("LoadingScreen").GetComponent<LoadingScreen>();
         LoadingScreen.OnLoad += OnLoad;
@@ -22,10 +24,12 @@ public class OnSceneLoad : MonoBehaviour
 
     void OnLoad(){
         var player = ServiceDesk.instance.GetItem("Player");
-        player.GetComponent<Interactee>().enabled = true;
-        if(player.GetComponent<SidePlayerController>())
-            player.GetComponent<SidePlayerController>().enabled = true;
-        if(player.GetComponent<TopPlayerController>())
-            player.GetComponent<TopPlayerController>().enabled = true;
+        if(player != null){
+            player.GetComponent<Interactee>().enabled = true;
+            if(player.GetComponent<SidePlayerController>())
+                player.GetComponent<SidePlayerController>().enabled = true;
+            if(player.GetComponent<TopPlayerController>())
+                player.GetComponent<TopPlayerController>().enabled = true;
+        }
     }
 }

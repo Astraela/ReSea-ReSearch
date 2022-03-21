@@ -48,18 +48,20 @@ public class NPC : BaseInteractable
     }
 
     IEnumerator Start () { 
+        yield return new WaitForEndOfFrame();
         DialogueHelper dialogueHelper = FindObjectOfType<DialogueHelper>();
+
         if(dialogueHelper.Npcs.ContainsKey(characterName)){
             show = dialogueHelper.Npcs[characterName].show;
             dialogueHelper.Npcs[characterName] = this;
         }else{
-                dialogueHelper.Npcs.Add(characterName,this);
+            dialogueHelper.Npcs.Add(characterName,this);
         }
         UpdateVisiblity(show);
         if (scriptToLoad != null) {
             DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+            print(dialogueRunner.transform.parent.name);
                     dialogueRunner.Add(scriptToLoad);  
         }
-        yield return new WaitForEndOfFrame();
     }
 }

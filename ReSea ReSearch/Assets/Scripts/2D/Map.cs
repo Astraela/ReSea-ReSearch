@@ -12,8 +12,12 @@ public class Map : MonoBehaviour
 
     public void SceneLoad(string scene){
         var player = ServiceDesk.instance.GetItem("Player");
-        player.GetComponent<Interactee>().enabled = false;
-        player.GetComponent<SidePlayerController>().enabled = false;
+        if(player != null){
+            if(player.GetComponent<SidePlayerController>())
+                player.GetComponent<SidePlayerController>().enabled = false;
+            if(player.GetComponent<TopPlayerController>())
+                player.GetComponent<TopPlayerController>().enabled = false;
+        }
         StartCoroutine(LoadSceneThingy(scene));
     }
 

@@ -24,13 +24,12 @@ public class LoadingScreen : MonoBehaviour
 
     private void UpdateTip(string text){
         LoadingTipText.text = text;
-        minLength = minLength + text.Length/30;
+        minLength = minLength + text.Length/50;
     }
 
     public void FinishedLoading() => finishedLoading = true;
 
     private void Update(){
-        print(Time.time - startTime);
         if(finishedLoading && Time.time - startTime >= minLength){
             OnLoad.Invoke();
             UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(gameObject.scene);

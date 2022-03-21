@@ -58,7 +58,27 @@ public class DialogueHelper : MonoBehaviour
 
     void Scene(Yarn.Value[] parameters){
         int sceneInt = (int)parameters[0].AsNumber;
-        SceneManager.LoadScene(sceneInt);
+        var player = ServiceDesk.instance.GetItem("Player");
+        if(player != null){
+            player.GetComponent<Interactee>().enabled = false;
+            if(player.GetComponent<SidePlayerController>())
+                player.GetComponent<SidePlayerController>().enabled = false;
+            if(player.GetComponent<TopPlayerController>())
+                player.GetComponent<TopPlayerController>().enabled = false;
+        }
+        StartCoroutine(LoadSceneThingy(sceneInt));
+    }
+
+    IEnumerator LoadSceneThingy(int scene){
+        SceneManager.LoadScene("Scenes/LoadingScreen", LoadSceneMode.Additive);
+        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+        var activeScene = SceneManager.GetActiveScene();
+        var newScene = SceneManager.GetSceneByBuildIndex(scene);
+        while (!newScene.isLoaded) {
+            yield return new WaitForSeconds(0.1f);
+        }
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(scene));
+        SceneManager.UnloadSceneAsync(activeScene);
     }
 
     void Activate(Yarn.Value[] parameters){
