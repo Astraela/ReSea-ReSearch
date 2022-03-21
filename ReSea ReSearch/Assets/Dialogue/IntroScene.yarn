@@ -19,4 +19,6 @@ Menou: Okay okay, such a responsibility. Sounds exciting!
 Let’s start with talking with all the different people involved, and understand the problem. 
 You will be able to act whenever you think you understand the problem and have the right solution.
 Just make sure you never act too rapidly.
+<<wait 1.5>>
+<<call scene(2)>>
 ===
