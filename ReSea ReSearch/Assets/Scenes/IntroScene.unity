@@ -255,9 +255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   show: 1
-  characterName: Example
-  talkToNode: Example
-  scriptToLoad: {fileID: 2480198943629176163, guid: b23199beb1617724b8b85d67397f6913, type: 3}
+  characterName: 
+  talkToNode: IntroScene
+  scriptToLoad: {fileID: 2480198943629176163, guid: 6602557d3e2009d43adbec4ca550e836, type: 3}
   autoInteract: 1
   interactRange: 2
   _range: 3

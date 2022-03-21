@@ -345,6 +345,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &69243562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205999211724294571, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378288050632133325, guid: b888084326f7f074a8027701525b061b, type: 3}
+      propertyPath: m_Name
+      value: Dialogue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b888084326f7f074a8027701525b061b, type: 3}
 --- !u!1 &87537180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3524,6 +3581,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1334668897
       objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128905, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: talkToNode
+      value: LionFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128905, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: scriptToLoad
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: a57d6229cb5c268438c2274b81c2d275, type: 3}
     - target: {fileID: 4048376351389128906, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4233,6 +4298,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1334668897
       objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128905, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: talkToNode
+      value: WhiteGrunt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128905, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: scriptToLoad
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 257ec26de2879094eaaf2cf98dfe3407, type: 3}
     - target: {fileID: 4048376351389128906, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_RootOrder
       value: 2

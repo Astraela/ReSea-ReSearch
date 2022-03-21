@@ -565,6 +565,18 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128905, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: talkToNode
+      value: PierMan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128905, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: scriptToLoad
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 9066fe9324582fc4e9d416114826a0c6, type: 3}
+    - target: {fileID: 4048376351389128905, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: characterName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4048376351389128906, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_RootOrder
       value: 5

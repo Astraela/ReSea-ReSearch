@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 6602557d3e2009d43adbec4ca550e836
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - NewYarnScript-IntroScene-0
+  - NewYarnScript-IntroScene-1
+  - NewYarnScript-IntroScene-2
+  - NewYarnScript-IntroScene-3
+  - NewYarnScript-IntroScene-4
+  - NewYarnScript-IntroScene-5
+  - NewYarnScript-IntroScene-6
+  - NewYarnScript-IntroScene-7
+  - NewYarnScript-IntroScene-8
+  - NewYarnScript-IntroScene-9
+  - NewYarnScript-IntroScene-10
+  - NewYarnScript-IntroScene-11
+  - NewYarnScript-IntroScene-12
+  - NewYarnScript-IntroScene-13
+  - NewYarnScript-IntroScene-14
+  - NewYarnScript-IntroScene-15
+  - NewYarnScript-IntroScene-16
+  - NewYarnScript-IntroScene-17
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 6602557d3e2009d43adbec4ca550e836, type: 3}
+  localizations: []
