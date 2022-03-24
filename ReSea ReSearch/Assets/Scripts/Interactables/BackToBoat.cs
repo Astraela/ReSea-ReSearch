@@ -29,13 +29,16 @@ public class BackToBoat : BaseInteractable
 
     IEnumerator LoadSceneThingy(){
         SceneManager.LoadScene("Scenes/LoadingScreen", LoadSceneMode.Additive);
-        SceneManager.LoadScene("Scenes/BoatScene", LoadSceneMode.Additive);
-        var scene = SceneManager.GetSceneByName("Scenes/BoatScene");
+        var scene = SceneManager.GetSceneByName("Scenes/LoadingScreen");
         while (!scene.isLoaded) {
             yield return new WaitForSeconds(0.1f);
         }
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Scenes/BoatScene"));
-        SceneManager.UnloadSceneAsync(gameObject.scene);
+        var LoadingScreen = ServiceDesk.instance.GetItem("LoadingScreen").GetComponent<LoadingScreen>();
+        LoadingScreen.OnLoad += OnLoad;
+        LoadingScreen.FinishedLoading();
+    }
 
+    void OnLoad(){
+        SceneManager.LoadScene("Scenes/BoatScene", LoadSceneMode.Single);
     }
 }

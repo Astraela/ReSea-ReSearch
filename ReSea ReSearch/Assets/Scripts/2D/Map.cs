@@ -6,13 +6,18 @@ using UnityEngine.SceneManagement;
 public class Map : MonoBehaviour
 {
     public void MapSelect(string id){
-        ServiceDesk.instance.GetItem("Boat").GetComponent<Boat>().Exit();
+        //ServiceDesk.instance.GetItem("Boat").GetComponent<Boat>().Exit();
         gameObject.SetActive(false);
     }
 
     public void SceneLoad(string scene){
+        ServiceDesk.instance.GetItem("Boat").GetComponent<Boat>().Exit(scene);
+        Camera.main.GetComponent<CamScript>().enabled = false;
+        gameObject.SetActive(false);
+        return;
         var player = ServiceDesk.instance.GetItem("Player");
         if(player != null){
+            player.GetComponent<Interactee>().enabled = false;
             if(player.GetComponent<SidePlayerController>())
                 player.GetComponent<SidePlayerController>().enabled = false;
             if(player.GetComponent<TopPlayerController>())

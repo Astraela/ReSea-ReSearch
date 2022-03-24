@@ -60,8 +60,7 @@ public class NPC : BaseInteractable
         UpdateVisiblity(show);
         if (scriptToLoad != null) {
             DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-            print(dialogueRunner.transform.parent.name);
-                    dialogueRunner.Add(scriptToLoad);  
+            dialogueRunner.Add(scriptToLoad);  
         }
     }
 }

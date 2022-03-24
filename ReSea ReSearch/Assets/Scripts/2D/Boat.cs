@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Boat : MonoBehaviour
@@ -11,23 +12,31 @@ public class Boat : MonoBehaviour
     public Transform BoatPosition;
     public Transform PlayerPosition;
 
-    public void Exit(){
-        var player = ServiceDesk.instance.GetItem("Player");
-        player.transform.position = PlayerPosition.position;
-        player.transform.SetParent(transform);
-        player.GetComponent<Interactee>().enabled = false;
-        player.GetComponent<SidePlayerController>().enabled = false;
+    public void Start(){
+        transform.position = BoatEntryPoint.position;
         Camera.main.GetComponent<CamScript>().enabled = false;
-        StartCoroutine(ExitAnim());
-    }
-
-    public void Enter(){
         var player = ServiceDesk.instance.GetItem("Player");
         player.transform.position = PlayerPosition.position;
         player.transform.SetParent(transform);
+        if(player != null){
+            player.GetComponent<Interactee>().enabled = false;
+            if(player.GetComponent<SidePlayerController>())
+                player.GetComponent<SidePlayerController>().enabled = false;
+            if(player.GetComponent<TopPlayerController>())
+                player.GetComponent<TopPlayerController>().enabled = false;
+        }
+        var blackout = ServiceDesk.instance.GetItem("Blackout").GetComponentInChildren<Image>();
+            blackout.color = new Color(0,0,0,1);
+        StartCoroutine(EnterAnim());
+        StartCoroutine(FadeOut());
     }
 
-    IEnumerator ExitAnim(){
+    public void Exit(string scene){
+        StartCoroutine(ExitAnim(scene));
+    }
+
+
+    public IEnumerator ExitAnim(string scene){
         Vector3 startPos = transform.position;
         float value = 0;
         bool FadeStarted = false;
@@ -37,29 +46,30 @@ public class Boat : MonoBehaviour
             value += Time.deltaTime * boatMoveSpeed * .3f;
             if(!FadeStarted && value > .6f){
                 FadeStarted = true;
-                    StartCoroutine(Fade());
+                    StartCoroutine(FadeIn(scene));
             }
         }
         
     }
 
-    IEnumerator Fade(){
+    IEnumerator FadeIn(string scene){
         var blackout = ServiceDesk.instance.GetItem("Blackout").GetComponentInChildren<Image>();
         float value = 0;
         while(blackout.color.a < 1){
             blackout.color = new Color(0,0,0,value);
             yield return new WaitForEndOfFrame();
-            value += Time.deltaTime * boatMoveSpeed * .8f;
+            value += Time.deltaTime * boatMoveSpeed * .4f;
         }
-        value = 0;
-        bool enterStarted = false;
-        while(blackout.color.a != 0){
-            blackout.color = new Color(0,0,0,1-value);
+        StartCoroutine(LoadSceneThingy(scene));
+    }
+
+    IEnumerator FadeOut(){
+        var blackout = ServiceDesk.instance.GetItem("Blackout").GetComponentInChildren<Image>();
+        float value = 1;
+        while(blackout.color.a > 0){
+            blackout.color = new Color(0,0,0,value);
             yield return new WaitForEndOfFrame();
-            value += Time.deltaTime * boatMoveSpeed * .6f;
-            if(!enterStarted && value > .05f){
-                StartCoroutine(EnterAnim());
-            }
+            value -= Time.deltaTime * boatMoveSpeed * .8f;
         }
     }
 
@@ -70,14 +80,24 @@ public class Boat : MonoBehaviour
         while(transform.position != BoatPosition.position){
             transform.position = Vector3.Lerp(transform.position,BoatPosition.position,value);
             yield return new WaitForEndOfFrame();
-            value += Time.deltaTime * boatMoveSpeed * .00003f;
+            value += Time.deltaTime * boatMoveSpeed * .009f;
             if(!enabled && Vector2.Distance(transform.position, BoatPosition.position) < .5f){
                 enabled = true;
-                player.GetComponent<Interactee>().enabled = true;
-                player.GetComponent<SidePlayerController>().enabled = true;
+                if(player != null){
+                    player.GetComponent<Interactee>().enabled = true;
+                    if(player.GetComponent<SidePlayerController>())
+                        player.GetComponent<SidePlayerController>().enabled = true;
+                    if(player.GetComponent<TopPlayerController>())
+                        player.GetComponent<TopPlayerController>().enabled = false;
+                }
                 Camera.main.GetComponent<CamScript>().enabled = true;
             }
         }
-        
+    }
+    
+    IEnumerator LoadSceneThingy(string scene){
+            yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+
     }
 }
