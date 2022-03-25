@@ -56,6 +56,7 @@ public class DialogueHelper : MonoBehaviour
         Npcs[name].UpdateVisiblity(true);
     }
 
+    int lastSceneInt;
     void Scene(Yarn.Value[] parameters){
         int sceneInt = (int)parameters[0].AsNumber;
         var player = ServiceDesk.instance.GetItem("Player");
@@ -66,19 +67,24 @@ public class DialogueHelper : MonoBehaviour
             if(player.GetComponent<TopPlayerController>())
                 player.GetComponent<TopPlayerController>().enabled = false;
         }
-        StartCoroutine(LoadSceneThingy(sceneInt));
+        lastSceneInt = sceneInt;
+        StartCoroutine(LoadSceneThingy());
     }
 
-    IEnumerator LoadSceneThingy(int scene){
+    IEnumerator LoadSceneThingy(){
         SceneManager.LoadScene("Scenes/LoadingScreen", LoadSceneMode.Additive);
-        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
-        var activeScene = SceneManager.GetActiveScene();
-        var newScene = SceneManager.GetSceneByBuildIndex(scene);
-        while (!newScene.isLoaded) {
+        var scene = SceneManager.GetSceneByName("Scenes/LoadingScreen");
+        while (!scene.isLoaded) {
             yield return new WaitForSeconds(0.1f);
         }
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(scene));
-        SceneManager.UnloadSceneAsync(activeScene);
+        var LoadingScreen = ServiceDesk.instance.GetItem("LoadingScreen").GetComponent<LoadingScreen>();
+        LoadingScreen.OnLoad += OnLoad;
+        LoadingScreen.FinishedLoading();
+    }
+
+    private void OnLoad()
+    {
+        SceneManager.LoadScene(lastSceneInt, LoadSceneMode.Single);
     }
 
     void Activate(Yarn.Value[] parameters){

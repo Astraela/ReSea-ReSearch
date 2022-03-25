@@ -30,12 +30,12 @@ public class NewsPaperSpawner : MonoBehaviour
         }
         var newNewsPaper = Instantiate(newsPapers.Find(x => x.name == solution).newspaper[index]).transform;
 
+        newNewsPaper.SetParent(transform,false);
         newNewsPaper.position = center.position + new Vector3(Random.Range(-10,10),Random.Range(-10,10),0);
         newNewsPaper.rotation = Quaternion.Euler(0,0,Random.Range(-15,15));
         newNewsPaper.localScale = Vector3.one*5;
-        newNewsPaper.SetParent(transform);
         StartCoroutine(SpawnNewspaper(newNewsPaper));
-        //index++;
+        index++;
     }
 
     IEnumerator SpawnNewspaper(Transform obj){
