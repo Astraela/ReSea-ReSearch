@@ -90,11 +90,9 @@ public class DialogueHelper : MonoBehaviour
 
     public void NodeComplete(string nodeName) {
         _visitedNodes.Add(nodeName);
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
 	public void NodeStart(string nodeName) {
-        Cursor.lockState = CursorLockMode.None;
         var tags = new List<string>(dialogueRunner.GetTagsForNode(nodeName));
         
 		Debug.Log($"Starting the execution of node {nodeName} with {tags.Count} tags.");

@@ -5995,8 +5995,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subject: {fileID: 4878100703230665011}
   deadzone: {x: 1, y: 1}
-  speed: 2
-  drag: 20
+  speed: 4
+  drag: 200
 --- !u!114 &4878100703230665008
 MonoBehaviour:
   m_ObjectHideFlags: 0

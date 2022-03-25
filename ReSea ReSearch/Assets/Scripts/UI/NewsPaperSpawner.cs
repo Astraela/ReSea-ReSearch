@@ -1,28 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewsPaperSpawner : MonoBehaviour
 {
     public Transform center;
-    [SerializeField]
-    public List<NewsPaper> newsPapers = new List<NewsPaper>();
 
-    private List<string> newsPaperNames;
+    public List<List<GameObject>> newspapers;
+    [SerializeField]
+    public List<NewsPapers> newsPapers = new List<NewsPapers>();
+    string solution;
+
+
     private int index = 0;
 
     void Start(){
-        StartNews(new List<string>(){"a","b","c","d","b","c","d","b","c","d"});
+        solution = Choice.Instance.choice;
     }
 
     public void StartNews(List<string> newsNames){
-        newsPaperNames = newsNames;
         //Next();
     }
 
     public void Next(){
-        if(index >= newsPaperNames.Count) return;
-        var newNewsPaper = Instantiate(newsPapers.Find(x => x.name == newsPaperNames[index]).newspaper).transform;
+        if(index >= newsPapers.Find(x => x.name == solution).newspaper.Count){
+            SceneManager.LoadScene("StartMenu");
+            return;
+        }
+        var newNewsPaper = Instantiate(newsPapers.Find(x => x.name == solution).newspaper[index]).transform;
 
         newNewsPaper.position = center.position + new Vector3(Random.Range(-10,10),Random.Range(-10,10),0);
         newNewsPaper.rotation = Quaternion.Euler(0,0,Random.Range(-15,15));
@@ -48,12 +54,7 @@ public class NewsPaperSpawner : MonoBehaviour
 }
 
 [System.Serializable]
-public class NewsPaper{
+public class NewsPapers{
     public string name;
-    public GameObject newspaper;
-
-    NewsPaper(string name, GameObject newspaper){
-        this.name = name;
-        this.newspaper = newspaper;
-    }
+    public List<GameObject> newspaper = new List<GameObject>();
 }

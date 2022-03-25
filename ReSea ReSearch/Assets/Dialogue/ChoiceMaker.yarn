@@ -10,36 +10,23 @@ Are you ready to make a choice?
 title: Choice.Choice
 tags:
 ---
-<<if visited("NPC1") and not visited("NPC2") and not visited("NPC3") and not visited("NPC4")>>
+Pick a solution
+<<if visited("LionFish") and not visited("PierMan") and not visited("WhiteGrunt")>>
     [[Choice.1]]
-<<elseif visited("NPC1") and visited("NPC2") and not visited("NPC3") and not visited("NPC4")>>
+<<elseif visited("LionFish") and visited("PierMan") and not visited("WhiteGrunt")>>
     [[Choice.12]]
-<<elseif visited("NPC1") and not visited("NPC2") and visited("NPC3") and not visited("NPC4")>>
+<<elseif visited("LionFish") and not visited("PierMan") and visited("WhiteGrunt") >>
     [[Choice.13]]
-<<elseif visited("NPC1") and not visited("NPC2") and not visited("NPC3") and visited("NPC4")>>
+<<elseif visited("LionFish") and not visited("PierMan") and not visited("WhiteGrunt") >>
     [[Choice.14]]
-<<elseif visited("NPC1") and visited("NPC2") and visited("NPC3") and not visited("NPC4")>>
+<<elseif visited("LionFish") and visited("PierMan") and visited("WhiteGrunt")>>
     [[Choice.123]]
-<<elseif visited("NPC1") and visited("NPC2") and not visited("NPC3") and visited("NPC4")>>
-    [[Choice.124]]
-<<elseif visited("NPC1") and not visited("NPC2") and visited("NPC3") and visited("NPC4")>>
-    [[Choice.134]]
-<<elseif visited("NPC1") and visited("NPC2") and visited("NPC3") and visited("NPC4")>>
-    [[Choice.1234]]
-<<elseif not visited("NPC1") and visited("NPC2") and not visited("NPC3") and not visited("NPC4")>>
+<<elseif not visited("LionFish") and visited("PierMan") and not visited("WhiteGrunt")>>
     [[Choice.2]]
-<<elseif not visited("NPC1") and visited("NPC2") and visited("NPC3") and not visited("NPC4")>>
+<<elseif not visited("LionFish") and visited("PierMan") and visited("WhiteGrunt")>>
     [[Choice.23]]
-<<elseif not visited("NPC1") and visited("NPC2") and not visited("NPC3") and visited("NPC4")>>
-    [[Choice.24]]
-<<elseif not visited("NPC1") and visited("NPC2") and visited("NPC3") and visited("NPC4")>>
-    [[Choice.234]]
-<<elseif not visited("NPC1") and not visited("NPC2") and visited("NPC3") and not visited("NPC4")>>
+<<elseif not visited("LionFish") and not visited("PierMan") and visited("WhiteGrunt")>>
     [[Choice.3]]
-<<elseif not visited("NPC1") and not visited("NPC2") and visited("NPC3") and visited("NPC4")>>
-    [[Choice.34]]
-<<elseif not visited("NPC1") and not visited("NPC2") and not visited("NPC3") and visited("NPC4")>>
-    [[Choice.4]]
 <<else>>
     [[Choice.0]]
 <<endif>>
@@ -53,8 +40,13 @@ tags:
     <<call scene(6)>>
 ===
 
-title: Choice.1
+title: Choice.123
 tags:
 ---
-
+    -> Ban Fishing on groupers //1
+        <<call activate("Choice","FishingBan")>>
+    -> Fishing on Lion fish //2
+        <<call activate("Choice","LionFishing")>>
+    -> Place Filters on boat //3
+        <<call activate("Choice","Filters")>>
 ===
