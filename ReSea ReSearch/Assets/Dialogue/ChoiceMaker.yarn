@@ -11,22 +11,8 @@ title: Choice.Choice
 tags:
 ---
 Pick a solution
-<<if visited("LionFish") and not visited("PierMan") and not visited("WhiteGrunt")>>
-    [[Choice.1]]
-<<elseif visited("LionFish") and visited("PierMan") and not visited("WhiteGrunt")>>
-    [[Choice.12]]
-<<elseif visited("LionFish") and not visited("PierMan") and visited("WhiteGrunt") >>
-    [[Choice.13]]
-<<elseif visited("LionFish") and not visited("PierMan") and not visited("WhiteGrunt") >>
-    [[Choice.14]]
-<<elseif visited("LionFish") and visited("PierMan") and visited("WhiteGrunt")>>
+<<if visited("LionFish") and visited("PierMan") and visited("WhiteGrunt")>>
     [[Choice.123]]
-<<elseif not visited("LionFish") and visited("PierMan") and not visited("WhiteGrunt")>>
-    [[Choice.2]]
-<<elseif not visited("LionFish") and visited("PierMan") and visited("WhiteGrunt")>>
-    [[Choice.23]]
-<<elseif not visited("LionFish") and not visited("PierMan") and visited("WhiteGrunt")>>
-    [[Choice.3]]
 <<else>>
     [[Choice.0]]
 <<endif>>
@@ -35,9 +21,8 @@ Pick a solution
 title: Choice.0
 tags:
 ---
-    The dialogues aren't yet properly connected as there rest of the dialogue hasn't been finished yet
-    for now enjoy the newspaper scene
-    <<call scene(6)>>
+    You haven't yet talked to everyone! 
+    Speak to everyone involved like a researcher should.
 ===
 
 title: Choice.123
