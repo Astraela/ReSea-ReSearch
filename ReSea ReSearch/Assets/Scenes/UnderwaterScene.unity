@@ -3663,6 +3663,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: effecf89c113c9e4bb6ab5a085e28dc2, type: 3}
+    - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
@@ -3684,11 +3700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4048376351389128906, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.309227
+      value: 23.76
       objectReference: {fileID: 0}
     - target: {fileID: 4048376351389128906, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.024358
+      value: 4.38
       objectReference: {fileID: 0}
     - target: {fileID: 4048376351389128906, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3724,7 +3740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4048376351389128907, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_Name
-      value: NPC (1)
+      value: Lionfish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
@@ -4380,6 +4396,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 158c6e26ddd1a3b4c8a740916ae53415, type: 3}
+    - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048376351389128904, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
@@ -4441,7 +4473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4048376351389128907, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: WhiteGrunt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd47aa2ed6c530459f8a6a42f3a03be, type: 3}
