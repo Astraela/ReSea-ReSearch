@@ -8,11 +8,16 @@ public class Interactee : MonoBehaviour
     public KeyCode interactButton = KeyCode.E;
 
     BaseInteractable currentInteractable;
+    GameObject _interactPopup;
+    GameObject interactPopup {get{
+        if(_interactPopup == null)
+            _interactPopup = ServiceDesk.instance.GetItem("InteractPopup");
+        return _interactPopup;
+    }}
 
     bool last = false;
     void InteractPopup(bool boolean){
         if(last == boolean) return;
-        GameObject interactPopup = ServiceDesk.instance.GetItem("InteractPopup");
         if(interactPopup != null)
             interactPopup.SetActive(boolean);
         
@@ -31,17 +36,20 @@ public class Interactee : MonoBehaviour
             }
         }
         InteractPopup(currentInteractable != null);
-        if(currentInteractable != null){
-            NPC isNpc = currentInteractable as NPC;
-            if(isNpc){
-                if(isNpc.autoInteract){
-                    isNpc.Interact();
-                    isNpc.autoInteract = false;
-                    return;
-                }
+        if(currentInteractable == null) return;
+
+        NPC isNpc = currentInteractable as NPC;
+        if(isNpc){
+            if(isNpc.autoInteract){
+                isNpc.Interact();
+                isNpc.autoInteract = false;
+                return;
             }
         }
-        if(currentInteractable != null && Input.GetKeyUp(interactButton)){
+
+        interactPopup.transform.position = Camera.main.WorldToScreenPoint(currentInteractable.transform.position) + currentInteractable.interactOffset;
+        interactPopup.transform.localScale = currentInteractable.scale;
+        if(Input.GetKeyUp(interactButton)){
             currentInteractable.Interact();
         }
     }

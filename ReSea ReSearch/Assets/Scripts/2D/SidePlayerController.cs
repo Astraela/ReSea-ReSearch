@@ -43,6 +43,8 @@ public class SidePlayerController : MonoBehaviour
         }
 
         Vector2 input = angle * (currentDirection == left ? -1 : (currentDirection == right ? 1 : 0)) * speed;
+        if(input.x != 0)
+            GetComponentInChildren<SpriteRenderer>().flipX = input.x > 0;
         rb.velocity = input;
     }
 }
