@@ -50,6 +50,8 @@ public class TopPlayerController : MonoBehaviour
         Vector2 ver = Vector2.down;
 
         Vector2 input = hor * (currentHorDirection == left ? -1 : (currentHorDirection == right ? 1 : 0)) * speed;
+        if(input.x != 0)
+            GetComponentInChildren<SpriteRenderer>().flipX = input.x > 0;
         input += ver * (currentVerDirection == up ? -1 : (currentVerDirection == down ? 1 : 0)) * speed;
         rb.velocity = input;
     }

@@ -41,17 +41,23 @@ public class Interactee : MonoBehaviour
         NPC isNpc = currentInteractable as NPC;
         if(isNpc){
             if(isNpc.autoInteract){
-                isNpc.Interact();
                 isNpc.autoInteract = false;
+                StartCoroutine(AutoInteract(isNpc));
                 return;
             }
         }
-
-        interactPopup.transform.position = Camera.main.WorldToScreenPoint(currentInteractable.transform.position) + currentInteractable.interactOffset;
-        interactPopup.transform.localScale = currentInteractable.scale;
+        if(interactPopup != null){
+            interactPopup.transform.position = Camera.main.WorldToScreenPoint(currentInteractable.transform.position) + currentInteractable.interactOffset;
+            interactPopup.transform.localScale = currentInteractable.scale;
+        }
         if(Input.GetKeyUp(interactButton)){
             currentInteractable.Interact();
         }
+    }
+
+    IEnumerator AutoInteract(NPC npc){
+        yield return new WaitForSeconds(.5f);
+        npc.Interact();
     }
 
     private void OnDisable(){
