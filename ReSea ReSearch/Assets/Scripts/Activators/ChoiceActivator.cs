@@ -33,7 +33,7 @@ public class ChoiceActivator : Activator
         while (!scene.isLoaded) {
             yield return new WaitForSeconds(0.1f);
         }
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Scenes/ResultsScene"));
-        SceneManager.UnloadSceneAsync(gameObject.scene);
     }
 }

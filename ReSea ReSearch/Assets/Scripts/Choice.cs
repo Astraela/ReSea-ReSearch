@@ -9,10 +9,13 @@ public class Choice : MonoBehaviour
 
     public static Choice Instance;
 
-    void Start(){
+    void Awake(){
         if(Instance == null){
             Instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+        else{
+            Destroy(gameObject);
         }
     }
 }
