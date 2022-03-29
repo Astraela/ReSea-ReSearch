@@ -260,6 +260,8 @@ MonoBehaviour:
   scriptToLoad: {fileID: 2480198943629176163, guid: 6602557d3e2009d43adbec4ca550e836, type: 3}
   autoInteract: 1
   interactRange: 2
+  _scale: {x: 1, y: 1, z: 1}
+  _interactOffset: {x: 0, y: 0, z: 0}
   _range: 3
   _interactable: 1
 --- !u!4 &497647605
@@ -312,7 +314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.3, y: -540}
+  m_AnchoredPosition: {x: -585.31, y: -273.36}
   m_SizeDelta: {x: 476.0309, y: 871.2078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &644669102
@@ -410,7 +412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -959.92, y: -540.05}
+  m_AnchoredPosition: {x: -584.93, y: -273.40997}
   m_SizeDelta: {x: 11.46, y: 7.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &799142082

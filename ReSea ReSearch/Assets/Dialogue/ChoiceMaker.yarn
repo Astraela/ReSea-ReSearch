@@ -11,7 +11,7 @@ title: Choice.Choice
 tags:
 ---
 Pick a solution
-<<if visited("LionFish") and visited("PierMan") and visited("WhiteGrunt")>>
+<<if visited("LionFish") and visited("PierMan") and visited("WhiteGrunt") and visited("Havenmeester")>>
     [[Choice.123]]
 <<else>>
     [[Choice.0]]

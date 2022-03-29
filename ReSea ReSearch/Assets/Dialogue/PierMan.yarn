@@ -1,12 +1,20 @@
 ﻿title: PierMan
 tags:
 ---
-Menou: Hey, can I ask you some questions? 
-Menou: Do you feel like things have changed around the oceans these past years?
-What do you mean? 
-We keep getting bigger and bigger freighters coming into the port, along with a bunch of those giant cruise ships. 
-But I don’t know if that is what you meant?
-Menou: That doesn’t seem like it’s out of the ordinary, but did you happen to notice anything else?
-I did hear some friends of mine say they spotted an unusual amount of lionfish while diving, but I doubt it’s related to your research.
-Menou: Thanks for the info, I think this may be useful.
+Menou: Hii, I’m Menou. As a fisherman you must know your fair share of things about the fish living in this ocean?
+Fisherman: Oh yes, I do happen to know everything about my ocean. What would you like to know?
+Menou: Did you notice anything unusual happening around the shores the last few years?
+Fisherman: I do actually, the groupers are one of the tastiest fish around here, but I feel like they're slowly disappearing from the oceans here. 
+Fisherman: Resulting in the lionfish population increasing because their natural enemies disappear. 
+Fisherman: Did you know that groupers are pretty much the only natural enemy of the lionfish in the caribbean?
+Menou: Wow, that’s a lot to process. I didn’t know that.
+
+-> Could you tell me more about the lionfish?
+    Fisherman: Yes of course, I’m just a fisherman, but I do suspect something major is going to happen if someone doesn’t do something quick. 
+    Fisherman: The coral devils are slowly taking over and they're booming in this part of the ocean.
+-> How do you think the lionfish ended up in this part of the ocean?
+    Fisherman: A few years ago I remember overhearing a few college students that claimed these lionfish got sucked up in the ballast tanks of freighters. 
+    Fisherman: Although I don’t feel confident enough to make any more claims about that.
+Menou: Thanks for the information, I learned a lot from you. But I have to proceed with my investigation, have a nice day!
+
 ===
