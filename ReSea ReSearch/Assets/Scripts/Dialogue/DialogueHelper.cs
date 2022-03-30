@@ -13,9 +13,19 @@ public class DialogueHelper : MonoBehaviour
     private HashSet<string> _visitedNodes = new HashSet<string>();
     public RectTransform dialogueText;
     public GameObject Options;
+
+
+    public static DialogueHelper Instance;
     void Awake(){
-        if(FindObjectsOfType<DialogueHelper>().Length > 1) Destroy(gameObject);
+        if(Instance == null){
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else{
+            Destroy(gameObject);
+        }
     }
+    string state = "default";
     void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -23,6 +33,8 @@ public class DialogueHelper : MonoBehaviour
         gameObject.name = "ORIGINAL";
 
         dialogueRunner.AddFunction("visited", 1, (Yarn.Value[] parameters) => {return Visited(parameters);});
+        dialogueRunner.AddFunction("setState",1, (Yarn.Value[] parameters) => {state = parameters[0].AsString;});
+        dialogueRunner.AddFunction("getState",0, (Yarn.Value[] parameters) => {return state;});
         dialogueRunner.AddFunction("hide",1,Hide);
         dialogueRunner.AddFunction("show",1,Show);
         dialogueRunner.AddFunction("uninteractable",1,UnInteractable);
@@ -91,6 +103,8 @@ public class DialogueHelper : MonoBehaviour
         string name = parameters[0].AsString;
         if(Activators.ContainsKey(name)){
             Activators[name].Activate(parameters[1]);
+        } else{
+            throw new System.Exception("No Activator Found");
         }
     }
 

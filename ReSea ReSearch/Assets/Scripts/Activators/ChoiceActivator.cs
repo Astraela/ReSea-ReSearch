@@ -6,9 +6,14 @@ using Yarn;
 
 public class ChoiceActivator : Activator
 {
+    public override void Start()
+    {
+        if (gameObject.scene.buildIndex == -1)
+            base.Start();
+    }
+
     public override void Activate(Value value)
     {
-        print("Activated");
         GetComponent<Choice>().choice = value.AsString;
         StartCoroutine(SceneTransition());
     }

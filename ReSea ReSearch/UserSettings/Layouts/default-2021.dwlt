@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Game
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 19
+  controlID: 17
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 25
+  controlID: 79
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 134
+  controlID: 80
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,21 +343,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 64
   m_LastProjectPath: D:\Unity\Sea-Research\ReSea ReSearch
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 75.80002}
-    m_SelectedIDs: d26f0000
-    m_LastClickedID: 28626
+    m_SelectedIDs: fe6f0000
+    m_LastClickedID: 28670
     m_ExpandedIDs: 000000003a6e00003c6e00003e6e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -411,8 +411,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 966b0000
-    m_LastClickedInstanceID: 27542
+    m_SelectedInstanceIDs: 66900000
+    m_LastClickedInstanceID: 36966
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000b09d0000149e00007ca30000cca40000a06e0000e6830000
     m_RenameOverlay:
@@ -514,9 +514,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 966b0000
-      m_LastClickedID: 27542
-      m_ExpandedIDs: 30fbfffff4ffffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 109affffb69affffa89cffffaa9dffff909effff9a9effff7ea0ffff30a1ffff4ca1ffffa2adffff6cb1ffff6eb8ffff2cbaffff42bcffff92bfffffe4c0fffffcc3ffffaec6ffff54c7ffff4ac9ffff50caffff3acbffff48cbffff1ecdffffd4cdfffff2cdffff30fbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -787,9 +787,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.9195516, y: 4.997684, z: 2.048348}
+    m_Target: {x: 1438.3156, y: 547.2107, z: -5.5061717}
     speed: 2
-    m_Value: {x: 3.9195516, y: 4.997684, z: 2.048348}
+    m_Value: {x: 1438.3156, y: 547.2107, z: -5.5061717}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -840,9 +840,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.917627
+    m_Target: 10
     speed: 2
-    m_Value: 11.917627
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2

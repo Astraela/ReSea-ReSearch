@@ -1,19 +1,26 @@
 ﻿title: Havenmeester
 tags:
 ---
+<<if getState() == "default">>
+    [[Havenmeester.Default]]
+<<endif>>
+===
+
+title: Havenmeester.Default
+tags:
+---
 Menou: Hey, can I ask you some questions? 
 Menou: Do you feel like things have changed around the oceans these past years?
-PortEmployee: What do you mean? 
-PortEmployee: We keep getting bigger and bigger freighters coming into the port, along with a bunch of those giant cruise ships. 
-PortEmployee: But I don’t know if that is what you meant?
+Port Employee: What do you mean? 
+Port Employee: We keep getting bigger and bigger freighters coming into the port, along with a bunch of those giant cruise ships. 
+Port Employee: But I don’t know if that is what you meant?
 Menou: That doesn’t seem like it’s out of the ordinary, but did you happen to notice anything else?
-PortEmployee: I did hear some friends of mine say they spotted an unusual amount of lionfish while diving, but I doubt it’s related to your research.
+Port Employee: I did hear some friends of mine say they spotted an unusual amount of lionfish while diving, but I doubt it’s related to your research.
 
 -> Could you tell me more about these lionfish?
-    PortEmployee: Yeah Sure, They’re a protected species of fish, and they have only been around for a few years.
+    Port Employee: Yeah Sure, They’re a protected species of fish, and they have only been around for a few years.
 -> Did your fisher friends say anything else about these fish?
-    PortEmployee: Not really, although I do remember a friend of mine rambling about the fish getting caught in their fishing nets, and that they’re a real pain in the ass to get unstuck from the nets. 
-    PortEmployee: And since you can’t legally catch them, they’re just terrible for the fishing industry.
+    Port Employee: Not really, although I do remember a friend of mine rambling about the fish getting caught in their fishing nets, and that they’re a real pain in the ass to get unstuck from the nets. 
+    Port Employee: And since you can’t legally catch them, they’re just terrible for the fishing industry.
 Menou: Thanks for the info, I think this may be useful.
-
 ===

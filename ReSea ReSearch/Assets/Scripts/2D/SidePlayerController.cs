@@ -10,12 +10,14 @@ public class SidePlayerController : MonoBehaviour
 
     public float speed = 5;
 
+    float height = .71f;
     private KeyCode currentDirection = KeyCode.None;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        height = GetComponentInChildren<Renderer>().bounds.extents.y - .1f;
     }
 
     // Update is called once per frame
@@ -34,7 +36,7 @@ public class SidePlayerController : MonoBehaviour
 
         Vector2 angle = Vector2.right;
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position,Vector2.down,.71f,7);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position,Vector2.down,height,7);
         if(hit){
             rb.gravityScale = 0;
             angle = new Vector2(hit.normal.y,-hit.normal.x);
