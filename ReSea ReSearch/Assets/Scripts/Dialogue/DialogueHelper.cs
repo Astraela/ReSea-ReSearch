@@ -10,7 +10,7 @@ public class DialogueHelper : MonoBehaviour
     public Dictionary<string,Activator> Activators = new Dictionary<string, Activator>(); 
     public Dictionary<string,NPC> Npcs =  new Dictionary<string, NPC>();
     DialogueRunner dialogueRunner;
-    private HashSet<string> _visitedNodes = new HashSet<string>();
+    public HashSet<string> _visitedNodes = new HashSet<string>();
     public RectTransform dialogueText;
     public GameObject Options;
 

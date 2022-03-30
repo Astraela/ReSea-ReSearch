@@ -10,8 +10,8 @@ Are you ready to make a choice?
 title: Choice.Choice
 tags:
 ---
-Pick a solution
 <<if visited("LionFish") and visited("PierMan") and visited("WhiteGrunt") and visited("Havenmeester")>>
+    Pick an action
     [[Choice.123]]
 <<else>>
     [[Choice.0]]
@@ -21,17 +21,54 @@ Pick a solution
 title: Choice.0
 tags:
 ---
-    You haven't yet talked to everyone! 
-    Speak to everyone involved like a researcher should.
+You haven't yet spoken to everyone! 
+Speak to everyone involved like a researcher should.
 ===
 
 title: Choice.123
 tags:
 ---
-    -> Ban Fishing on groupers //1
-        <<call activate("Choice","FishingBan")>>
-    -> Fishing on Lion fish //2
-        <<call activate("Choice","LionFishing")>>
-    -> Place Filters on boat //3
-        <<call activate("Choice","Filters")>>
+-> Ban Fishing on groupers //1
+    [[Choice.FishingBan]]
+-> Fishing on Lion fish //2
+    [[Choice.LionFishing]]
+-> Place Filters on boat //3
+    [[Choice.Filters]]
+-> Return
+===
+
+title: Choice.FishingBan
+tags:
+---
+//Put dialog here about what this action means
+Do you wanna select this?
+-> No
+    [[Choice.123]]
+-> Yes
+    <<call setState("FishingBan")>>
+    <<call activate("Choice","FishingBan")>>
+===
+
+title: Choice.LionFishing
+tags:
+---
+//Put dialog here about what this action means
+Do you wanna select this?
+-> No
+    [[Choice.123]]
+-> Yes
+    <<call setState("LionFishing")>>
+    <<call activate("Choice","LionFishing")>>
+===
+
+title: Choice.Filters
+tags:
+---
+//Put dialog here about what this action means
+Do you wanna select this?
+-> No
+    [[Choice.123]]
+-> Yes
+    <<call setState("Filters")>>
+    <<call activate("Choice","Filters")>>
 ===
