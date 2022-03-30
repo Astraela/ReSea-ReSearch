@@ -1,6 +1,19 @@
 ﻿title: WhiteGrunt
 tags:
 ---
+<<if getState() == "default">>
+    [[WhiteGrunt.Default]]
+<<elseif getState() == "FishingBan">>
+    [[WhiteGrunt.FishingBan]]
+<<elseif getState() == "LionFishing">>
+    [[WhiteGrunt.LionFishing]]
+<<elseif getState() == "Filters">>
+    [[WhiteGrunt.Filters]]
+<<endif>>
+===
+
+title: WhiteGrunt.Default
+---
 White Grunt: What are you doing here? 
 White Grunt: Trying to catch my family from me? 
 White Grunt: I know your kind. 
@@ -22,4 +35,35 @@ White Grunt: The disappearance started since your kind introduced these spiky fi
 Menou: Humans introduced a new species?
 White Grunt: Ow yes they did. Have a nice day.
 Menou: Ow okay, bye.
+===
+
+title: WhiteGrunt.FishingBan
+---
+Menou: Hi, how are you doing?
+White Grunt: Hmm, I don’t know. What happened? The lionfish are like basically gone. The ones that are still around are super scared and hiding. 
+White Grunt: The unclarified disappearing has stopped so obviously these new intruders were behind it.
+Menou: and the Groupers?
+White Grunt: Well, you know we don’t like them. We are used to them, but not this many. 
+White Grunt: Seems like the threat of these unclarified disappearance is replaced by more white grunt eating groupers. 
+===
+
+title: WhiteGrunt.LionFishing
+---
+White Grunt: Amazing, amazing, amazing. 
+Menou: I’m sorry, what is?
+White Grunt: I feel amazing. The reefs look amazing again. Even our annoying neighbours seem to be content. 
+White Grunt: We do not necessarily like each other. I mean, they feed on my kind. Still I’m happy to see everyone at peace. 
+White Grunt: Thank you by the way. I knew I could trust you. Nice catch work from the people above the water.
+Menou: So would you say your environment is restored to the way it was before?
+White Grunt: Pretty much yeah.
+===
+
+title: WhiteGrunt.Filters
+---
+Menou: Hi, how are you doing?
+White Grunt: I knew I could trust you. You’re different from the others. 
+White Grunt: I don’t know what you did but there are less creepy pointy creatures than before. 
+White Grunt: Turns out they ate half of my friends and family. Well a lot of them stayed here so we still have to deal with them. 
+White Grunt: Heard they spread like bunnies, so maybe they will still persist. 
+White Grunt: They however do distract the Groupers from eating us so a few of them won’t do any harm
 ===

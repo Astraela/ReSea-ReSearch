@@ -1,6 +1,19 @@
 ﻿title: LionFish
 tags:
 ---
+<<if getState() == "default">>
+    [[LionFish.Default]]
+<<elseif getState() == "FishingBan">>
+    [[LionFish.FishingBan]]
+<<elseif getState() == "LionFishing">>
+    [[LionFish.LionFishing]]
+<<elseif getState() == "Filters">>
+    [[LionFish.Filters]]
+<<endif>>
+===
+
+title: LionFish.Default
+---
 Lion Fish: WHOA, you scared me, human in a water suit. 
 Lion Fish: What are you doing here?
 Menou: Hi there! Interesting scales you have going on there. 
@@ -21,4 +34,30 @@ Lion Fish: Except for one thing, my neighbors: The Groupers family.
 Lion Fish: They look nice and friendly, but when they get hungry they see me and my family as a tasty snack. 
 Menou: Oii that sounds scary. Can I ask you a little more about …
 Lion Fish: Nope that was all. Bye!
+===
+
+title: LionFish.FishingBan
+---
+Lion Fish: WHOA, you scared me again! What are you doing here?
+Menou: I was just wondering how you are doing.
+Lion Fish: I’m scared like hell. I knew you were not to trust. 
+Lion Fish: I told you about my neighbors, the Groupers. Now they are everywhere. Snacking away all the family I have.
+
+===
+
+title: LionFish.LionFishing
+---
+Lion Fish: WHOA, you scared me again! What are you doing here?
+Menou: I was just wondering how you are doing.
+Lion Fish: All these lines, all these netts. I think I’m getting mad. They’re aiming for me. Not fair to target the new ones.
+Menou: I feel sorry for you.
+Lion Fish: Nope, don’t do that. We
+===
+
+title: LionFish.Filters
+---
+Menou: Hi, how are you doing?
+Lion Fish: Unbelievable, don’t you dare talking to me. I don’t trust you humans. I guess it’s the weird water suit. 
+Lion Fish: My uncle died because he got stuck in one of these filters 
+Lion FIsh: My population within this ecosystem is decreasing because there is no more immigration.
 ===

@@ -1,6 +1,19 @@
 ﻿title: PierMan
 tags:
 ---
+<<if getState() == "default">>
+    [[PierMan.Default]]
+<<elseif getState() == "FishingBan">>
+    [[PierMan.FishingBan]]
+<<elseif getState() == "LionFishing">>
+    [[PierMan.LionFishing]]
+<<elseif getState() == "Filters">>
+    [[PierMan.Filters]]
+<<endif>>
+===
+
+title: PierMan.Default
+---
 Menou: Hii, I’m Menou. As a fisherman you must know your fair share of things about the fish living in this ocean?
 Fisherman: Oh yes, I do happen to know everything about my ocean. What would you like to know?
 Menou: Did you notice anything unusual happening around the shores the last few years?
@@ -16,5 +29,30 @@ Menou: Wow, that’s a lot to process. I didn’t know that.
     Fisherman: A few years ago I remember overhearing a few college students that claimed these lionfish got sucked up in the ballast tanks of freighters. 
     Fisherman: Although I don’t feel confident enough to make any more claims about that.
 Menou: Thanks for the information, I learned a lot from you. But I have to proceed with my investigation, have a nice day!
+===
 
+title: PierMan.FishingBan
+---
+Menou: How has work been?
+Fisherman: If you think this means I will stop fishing for groupers you're wrong.
+Menou: Why the strong desire?
+Fisherman: The groupers are the most valuable fish around here, entire villages thrive on those fish. 
+Fisherman: We won't have any income if we stop fishing for them.
+===
+
+title: PierMan.LionFishing
+---
+Menou: what do you think about lionfish hunting?
+Fisherman: I mean, you can't really fish them. You need to get down there with a scuba suit and a spear gun. 
+Fisherman: But I'm glad they will stop eating the other fish. Meaning more fish for me.
+Menou: That seems logical, but you probably know some people that hunt them then?
+Fisherman: Yes I do, my brother hunts them, he gives scuba hunting excursions, for divers who want to help get rid of this invasive species.
+===
+
+title: PierMan.Filters
+---
+Menou: how do you feel about the filters?
+Fisherman: To be honest, I couldn't care less. 
+Fisherman: Although the fish that get caught and killed in these filters are the perfect bait for larger fish to show up. 
+Fisherman: I would have preferred a long term solution. But this seems to work for now.
 ===

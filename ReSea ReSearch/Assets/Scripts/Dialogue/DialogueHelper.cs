@@ -104,6 +104,14 @@ public class DialogueHelper : MonoBehaviour
         if(Activators.ContainsKey(name)){
             Activators[name].Activate(parameters[1]);
         } else{
+            var list = FindObjectsOfType<Activator>();
+            foreach(Activator activator in list){
+                if(activator.identifier == name){
+                    activator.Activate(parameters[1]);
+                    goto TotalBreak;
+                }
+            }
+            TotalBreak: return;
             throw new System.Exception("No Activator Found");
         }
     }

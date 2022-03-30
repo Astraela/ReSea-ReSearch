@@ -3,6 +3,12 @@ tags:
 ---
 <<if getState() == "default">>
     [[Havenmeester.Default]]
+<<elseif getState() == "FishingBan">>
+    [[Havenmeester.FishingBan]]
+<<elseif getState() == "LionFishing">>
+    [[Havenmeester.LionFishing]]
+<<elseif getState() == "Filters">>
+    [[Havenmeester.Filters]]
 <<endif>>
 ===
 
@@ -25,4 +31,24 @@ Port Employee: I did hear some friends of mine say they spotted an unusual amoun
 Menou: Thanks for the info, I think this may be useful.
 ===
 
+title: Havenmeester.FishingBan
+---
+Menou: How do you feel about the fishing ban
+Port Employee: A lot of fishing boats started moving to different parts of the island, meaning I’m losing money I would’ve made renting out harbor space for the boats.
+===
+
+title: Havenmeester.LionFishing
+---
+Menou: How do you feel about the hunting on lionfish?
+Port Employee: Friends of mine actually hunt on them, they do make for a good beach barbecue.
+===
+
+title: Havenmeester.Filters
+---
+Menou: Hey, How are you doing?
+Port Employee: Are you stupid? Do you have any idea how often these filters get clogged with fish? 
+Port Employee: The amount of fish that get ripped to pieces by these filters? And the delays the replacement of the filters cause?
+Menou: I’m so sorry to hear that.
+Port Employee: I bet you do. Stupid climate freaks. Just let us do our job.
+===
 
