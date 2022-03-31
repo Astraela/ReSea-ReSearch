@@ -937,9 +937,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notepads:
-  - name: LionFish.Default
+  - name: LionFish.Default.Ended
     notepad: {fileID: 3539384541411070302}
-  - name: WhiteGrunt.Default
+  - name: \WhiteGrunt.Default.Ended
     notepad: {fileID: 3539384541468636468}
   - name: PierMan.Default
     notepad: {fileID: 3539384541208808014}

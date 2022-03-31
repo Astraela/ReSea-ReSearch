@@ -32,14 +32,15 @@ Menou: Are these disappearances a recent development?
 
 White Grunt: Yes, it started after the spiky fish arrived, I believe you call them Lion Fish?
 -> I do have another question. Is it okay if I ask one more?
+    White Grunt: I feel like I can trust you, so, go on. Maybe you can help.
     [[WhiteGrunt.Default.Q1]]
 -> Okay I think that's enough for now. Thank you for your help!
     Menou to herself: I did read something about invasive species getting introduced in new ecosystems. Let's keep that in mind.
+[[WhiteGrunt.Default.Ended]]
 ===
 
 title: WhiteGrunt.Default.Q1
 ---
-White Grunt: I feel like I can trust you, so, go on. Maybe you can help.
 ->Were there no other predators before the lionfish?
     White Grunt: Well yes. We get eaten by the Groupers, but that's everyday life, We're used to it.
     [[WhiteGrunt.Default.Q1]]
@@ -52,6 +53,11 @@ White Grunt: I feel like I can trust you, so, go on. Maybe you can help.
 ->I think that's all I need for now. Thank you. I hope I can help restore your ecosystem.
     White Grunt: Thank you, you gave me a little hope for the future.
     Menou to herself: I did read something about invasive species getting introduced in new ecosystems. Let's keep that in mind.
+[[WhiteGrunt.Default.Ended]]
+===
+
+title: WhiteGrunt.Default.Ended
+---
 ===
 
 title: WhiteGrunt.FishingBan
