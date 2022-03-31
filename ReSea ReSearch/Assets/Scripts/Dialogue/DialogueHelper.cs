@@ -118,6 +118,10 @@ public class DialogueHelper : MonoBehaviour
 
     public void NodeComplete(string nodeName) {
         _visitedNodes.Add(nodeName);
+        Notepad attempt = FindObjectOfType<Notepad>();
+        if(attempt != null){
+            attempt.TryEnable(nodeName);
+        }
     }
 
 	public void NodeStart(string nodeName) {
