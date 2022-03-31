@@ -29,5 +29,5 @@ Just make sure you never act too rapidly.
 -> Yes boss!
 -> This will be easy.
 <<wait 1.5>>
-<<call scene(2)>>
+<<call scene(3)>>
 ===
