@@ -16,48 +16,124 @@ title: LionFish.Default
 ---
 Lion Fish: WHOA, you scared me, human in a water suit. 
 Lion Fish: What are you doing here?
-Menou: Hi there! Interesting scales you have going on there. 
-Menou: I’m not very used to talking to your kind of animals. 
+-> Hi there! Interesting scales you have going on there. 
+-> I’m not very used to talking to your kind of animals. 
 Menou: Can I have a little moment with you?
-Lion Fish: I didn’t do anything. Not guilty!
-Menou: Calm down, I’m only exploring the reefs. 
-Menou:What are you doing here?
-Lion Fish: We’ve been around for a few decades now. 
-Lion Fish: My parents moved here with some sci-fi monstrous steel fish. 
-Lion Fish: They did not really choose this moving houses, but it turned out quite nice. 
-Lion Fish: Good food! They didn’t have these small fish at the place they came from. 
-Lion Fish: Seems like they don’t see us as a threat yet, twerps…
-Menou: So… You’re new here? Do you like your new home?
-Lion Fish: I won’t tell you anything. My parents told me you were guiding that monstrous ship. 
-Lion Fish: I won’t trust you. 
-Lion Fish: Except for one thing, my neighbors: The Groupers family. 
-Lion Fish: They look nice and friendly, but when they get hungry they see me and my family as a tasty snack. 
-Menou: Oii that sounds scary. Can I ask you a little more about …
-Lion Fish: Nope that was all. Bye!
+<<if visited("WhiteGrunt")>>
+    [[LionFish.Default.If1]]
+<<else>>
+    [[LionFish.Default.If2]]
+<<endif>>
+===
+
+title: LionFish.Default.If1
+---
+-> Calm down, I'm only exploring the reefs. 
+    [[LionFish.Default.Q1]]
+-> That makes me think you're guilt of something. 
+    [[LionFish.Default.Q2]]
+===
+
+title: LionFish.Default.If2
+---
+-> Calm down, I'm only exploring the reefs. 
+    [[LionFish.Default.Q1]]
+-> That makes me think you're guilt of something. 
+    [[LionFish.Default.Q2]]
+-> I've heard about you.
+    [[LionFish.Default.Q3]]
+===
+
+title: LionFish.Default.Q1
+---
+Lion Fish: Okay and why is that?
+Menou: There are some disturbances in the ecosystem and I'm trying to figure out what happened.
+[[LionFish.Default.Q4]]
+===
+title: LionFish.Default.Q2
+---
+Menou: What are you doing here?
+Lion Fish: That's not nice of you to say. It's none of your business.
+Menou to herself: Oops, I should be more careful when talking to him. Should I try again?
+===
+title: LionFish.Default.Q3
+---
+Menou: You're the new spiky neighbor
+Lion Fish: They're still gossiping about us, the so called "new ones".
+Menou: I understand how you feel. It's my first day at work. It's not great, being the "new one".
+[[LionFish.Default.Q4]]
+===
+
+title:LionFish.Default.Q4
+---
+Lion Fish: Do you need anything? I don't experience huge problems but I might be able to help you.
+-> How do you like your new home?
+    Lion Fish: There's good food and enough space for everyone. But unfortunately worse neighbors and the reefs are ugly
+    Lion Fish: My parents moved here with some monstrous steel fish.  They did not really choose to move, but it turned out quite nice
+    Menou: monstrous steel fish? I think you mean container ships. Can I maybe ask you a bit more about
+    ->Those neighbors?
+        Lion Fish: Yes, the Groupers. These nasty big gobbling creatures. I'm happy they get caught by your kind.
+        Lion Fish: Otherwise my population wouldn't excel like we do
+    ->These ships?
+        Lion Fish: Nope that was all. About to tell me what I didnt and did see, Bye!
+        Menou to herself: Well they were obviously container ships. I hear about the movement of fish in ballast tanks.
+-> What do you think of the White Grunt?
+    Lion Fish: Good food! They didn't have these tasty fish where we came from. Seems like they don't see us as a real threat yet. twerps....
+    Menou: Poor little things. Can I ask you a little bit more about
+    ->How your parents moved here?
+        Lion Fish: My parents moved here with some monstrous steel fish.  They did not really choose to move, but it turned out quite nice.
+        Menou: monstrous steel fish? I think you mean container ships. Can I maybe ask you a bit more about those ships?
+        Lion Fish: Nope that was all. About to tell me what I didnt and did see, Bye!
+        Menou to herself: Well they were obviously container ships. I hear about the movement of fish in ballast tanks.
+    ->these prey?
+        Lion Fish: Nope that was all. You're obviously choosing their side. Bye!
+        Menou to herself: I really try to stay objective... I think we do have a lot of information, wonder if it's enough.
+-> Do you know who the groupers are?
+    Lion Fish: Yes, the Groupers. These nasty big gobbling creatures. I'm happy they get caught by your kind.
+    Lion Fish: Otherwise my population wouldn't excel like we do
+    Menou: ohh that sounds scary. Can I ask you a little more about
+    ->How your parents moved here?
+        Lion Fish: My parents moved here with some monstrous steel fish.  They did not really choose to move, but it turned out quite nice.
+        Menou: monstrous steel fish? I think you mean container ships. Can I maybe ask you a bit more about those ships?
+        Lion Fish: Nope that was all. About to tell me what I didnt and did see, Bye!
+        Menou to herself: Well they were obviously container ships. I hear about the movement of fish in ballast tanks.
+    ->These Groupers?
+        Lion Fish: Nope that was all. I don't think I have anything more to tell. Bye!
+        Menou to herself: hmm I think we do have a lot of information, wonder if it's enough.
+
 ===
 
 title: LionFish.FishingBan
 ---
 Lion Fish: WHOA, you scared me again! What are you doing here?
-Menou: I was just wondering how you are doing.
-Lion Fish: I’m scared like hell. I knew you were not to trust. 
-Lion Fish: I told you about my neighbors, the Groupers. Now they are everywhere. Snacking away all the family I have.
-
+-> I was just wondering how you are doing.
+    Lion Fish: I’m scared like hell. I knew you were not to trust. 
+    Lion Fish: I told you about my neighbors, the Groupers. Now they are everywhere. Snacking away all the family I have.
+-> Did you notice anything unusual lately?
+    Lion Fish: Are you really stupid, or just pretending? Since I last spoke to you these groupers have been popping up out of nowhere. Eating my kind and family.
+Menou: I can imagine that it isn't what you hoped for.
+Lion Fish: Oh well, as long as we keep hiding they're too big to get us from between the rifs.
+Menou: Ah I see, I'll go for now. Good luck with the Groupers.
 ===
 
 title: LionFish.LionFishing
 ---
-Lion Fish: WHOA, you scared me again! What are you doing here?
-Menou: I was just wondering how you are doing.
-Lion Fish: All these lines, all these netts. I think I’m getting mad. They’re aiming for me. Not fair to target the new ones.
-Menou: I feel sorry for you.
-Lion Fish: Nope, don’t do that. We
+Lion Fish: Go ahead, just shoot me. I'm tired of fleeing
+Menou: What do you mean? I'm not here to hurt you.
+Lion Fish: That's what they all say, right before they shoot my kind with spearguns.
+-> You know it's for the greater good right?
+    Lion Fish: Just leave, I've heard enough!
+-> I'm sorry!
+    Lion Fish: You're just saying that to cope with your own guilt. You should go!
 ===
 
 title: LionFish.Filters
 ---
 Menou: Hi, how are you doing?
-Lion Fish: Unbelievable, don’t you dare talking to me. I don’t trust you humans. I guess it’s the weird water suit. 
-Lion Fish: My uncle died because he got stuck in one of these filters 
-Lion FIsh: My population within this ecosystem is decreasing because there is no more immigration.
+Lion Fish: Unbelievable, don't you dare talk to me. I don't trust you humans. My uncle died because he got stuck in one of your filters.
+-> Well I did see a bloom of coral
+-> Something had to be done
+    Lion Fish: Nope the groupers are still hungry for us and the White grunt got used to use and are now harder to catch
+    Menou: Sounds like the ecosystem is recovering.
+Lion Fish: Stop talking please, Thank you.
 ===

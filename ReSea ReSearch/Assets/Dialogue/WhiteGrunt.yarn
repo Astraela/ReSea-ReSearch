@@ -17,34 +17,57 @@ title: WhiteGrunt.Default
 White Grunt: What are you doing here? 
 White Grunt: Trying to catch my family from me? 
 White Grunt: I know your kind. 
-White Grunt: Always taking more than you need.
-Menou: Not me! I come in peace. 
-Menou: Never talked to a fish before though. 
-Menou: What makes you so mad?
+Menou: Not me! I come in peace. Never talked to a fish before though. 
+-> What makes you so mad?
+-> I didn't know we took so many White Grunts.
 White Grunt: How do I know I can trust you? 
-White Grunt: People from our community keep disappearing out of nowhere. 
-White Grunt: These people, like you, above the water keep throwing their nets out. 
-White Grunt: You’re definitely not to trust.
-White Grunt: We never end up in your nets. 
-White Grunt: Too smart and small to catch. 
-White Grunt: Still I do not understand why all my fellows are disappearing. 
-White Grunt: If it’s not you, then who is the monster?
-Menou: I feel sorry for you. 
-White Grunt: Now that I think of it. 
-White Grunt: The disappearance started since your kind introduced these spiky fish in our system.
-Menou: Humans introduced a new species?
-White Grunt: Ow yes they did. Have a nice day.
-Menou: Ow okay, bye.
+-> People are not to trust.
+    White Grunt: Well no, you are definitely not.
+-> I never did any harm to any fish. I'm even a vegetarian.
+    White Grunt: I'm not. Eating and being eaten doesn't matter as long as you don't take too much.
+-> Well I love some salmon from time to time
+    White Grunt:So no White Grunt?
+White Grunt: I do not understand why all my fellows are disappearing
+Menou: Are these disappearances a recent development?
+
+White Grunt: Yes, it started after the spiky fish arrived, I believe you call them Lion Fish?
+-> I do have another question. Is it okay if I ask one more?
+    [[WhiteGrunt.Default.Q1]]
+-> Okay I think that's enough for now. Thank you for your help!
+    Menou to herself: I did read something about invasive species getting introduced in new ecosystems. Let's keep that in mind.
+===
+
+title: WhiteGrunt.Default.Q1
+---
+White Grunt: I feel like I can trust you, so, go on. Maybe you can help.
+->Were there no other predators before the lionfish?
+    White Grunt: Well yes. We get eaten by the Groupers, but that's everyday life, We're used to it.
+    [[WhiteGrunt.Default.Q1]]
+->How did this new species arrive?
+    White Grunt: I don't know. At one point there just arrived and the next thing my family is gone.
+    [[WhiteGrunt.Default.Q1]]
+->What is your position in the food web?
+    White Grunt: I'm a car(nivore but pretty low ranked, always going for the small snacks. Bigger fish like the Groupers go for me.)
+    [[WhiteGrunt.Default.Q1]]
+->I think that's all I need for now. Thank you. I hope I can help restore your ecosystem.
+    White Grunt: Thank you, you gave me a little hope for the future.
+    Menou to herself: I did read something about invasive species getting introduced in new ecosystems. Let's keep that in mind.
 ===
 
 title: WhiteGrunt.FishingBan
 ---
 Menou: Hi, how are you doing?
-White Grunt: Hmm, I don’t know. What happened? The lionfish are like basically gone. The ones that are still around are super scared and hiding. 
+White Grunt: Hmm, I don’t know. 
+-> What happened? 
+    White Grunt: The lionfish are like basically gone. The ones that are still around are super scared and hiding. 
+-> Is it positive or negative?
+    White Grunt: I'm just confused. The Lion Fish are almost gone, but the amount of Groupers is rapidly increasing. What's happening?
+Menou: Any positive parts?
 White Grunt: The unclarified disappearing has stopped so obviously these new intruders were behind it.
-Menou: and the Groupers?
-White Grunt: Well, you know we don’t like them. We are used to them, but not this many. 
-White Grunt: Seems like the threat of these unclarified disappearance is replaced by more white grunt eating groupers. 
+
+Menou: And the Groupers?
+White Grunt: Well, you know we don't like them. We are used to them, but not this many. 
+White Grunt: In a way the threat of these unclarified disappearance is replaced by the threat of more Groupers. 
 ===
 
 title: WhiteGrunt.LionFishing
@@ -60,10 +83,32 @@ White Grunt: Pretty much yeah.
 
 title: WhiteGrunt.Filters
 ---
-Menou: Hi, how are you doing?
-White Grunt: I knew I could trust you. You’re different from the others. 
-White Grunt: I don’t know what you did but there are less creepy pointy creatures than before. 
-White Grunt: Turns out they ate half of my friends and family. Well a lot of them stayed here so we still have to deal with them. 
-White Grunt: Heard they spread like bunnies, so maybe they will still persist. 
-White Grunt: They however do distract the Groupers from eating us so a few of them won’t do any harm
+White Grunt: Oh hello!
+-> Hi, how are you doing?
+    White Grunt: I'm so relieved. It is like a miracle happened.
+-> Did you notice anything?
+    White Grunt: I knew I could trust you. You're different from the others. 
+    White Grunt: I don't know what you did but there are less creepy pointers than before.
+Menou: What did you notice?
+White Grunt: There are noticeable less lionfish and there are less mysterious disappearances.
+Menou: Do you think there is a correlation between these two?
+White Grunt: Turns out they ate half of my friends and family
+-> Do you think it's over now?
+    White Grunt: Well a lot of them stayed here so we still have to deal with them. Heard they spread like bunnies.
+    ->Oh, that might be a problem
+    ->Don't worry, you'll be fine.
+    White Grunt: I'm so relieved it will all stay like this. I'll see you later.
+    Menou to herself: Did I do wrong by hiding I might have to make a change?
+-> What about the groupers, are they still around?
+    White Grunt: There are still a few Lion Fish left that distract the Groupers from eating us so a few of them won't do any harm
+    -> Oh, I did not think they were still around.
+    -> Don't worry you'll be fine.
+    White Grunt: I'm so relieved it will all stay like this. I'll see you later.
+    Menou to herself: Did I do wrong by hiding I might have to make a change?
+-> I heard I didn't act in the right way so something must be changed.
+    White Grunt: No please. It's fine the way it is, I'm afraid changes will turn it the wrong way.
+    -> I'm afraid I have to, Duty calls.
+    -> Don't worry, you'll be fine.
+    White Grunt: Don't you dare to break my trust
+    Menouo to herself: I'm afraid I might have to...
 ===

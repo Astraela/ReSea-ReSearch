@@ -25,7 +25,7 @@ public class NewsPaperSpawner : MonoBehaviour
 
     public void Next(){
         if(index >= newsPapers.Find(x => x.name == solution).newspaper.Count){
-            SceneManager.LoadScene("StartMenu");
+            SceneManager.LoadScene("IntroScene");
             return;
         }
         var newNewsPaper = Instantiate(newsPapers.Find(x => x.name == solution).newspaper[index]).transform;
