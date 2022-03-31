@@ -939,11 +939,11 @@ MonoBehaviour:
   notepads:
   - name: LionFish.Default.Ended
     notepad: {fileID: 3539384541411070302}
-  - name: \WhiteGrunt.Default.Ended
+  - name: WhiteGrunt.Default.Ended
     notepad: {fileID: 3539384541468636468}
-  - name: PierMan.Default
+  - name: Pierman.Default.End
     notepad: {fileID: 3539384541208808014}
-  - name: Havenmeester.Default
+  - name: Havenmeester.Default.End
     notepad: {fileID: 3539384541464428350}
 --- !u!1 &3539384540932156933
 GameObject:
