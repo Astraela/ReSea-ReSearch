@@ -14,30 +14,61 @@ tags:
 
 title: PierMan.Default
 ---
-Menou: Hii, I’m Menou. As a fisherman you must know your fair share of things about the fish living in this ocean?
-Fisherman: Oh yes, I do happen to know everything about my ocean. What would you like to know?
+Menou: Hi! As a fisherman you must know your fair share of things about the fish living in this ocean?
+Fisherman: Well you know… I’m just doing what has to be done. Fishing and stuff
 Menou: Did you notice anything unusual happening around the shores the last few years?
-Fisherman: I do actually, the groupers are one of the tastiest fish around here, but I feel like they're slowly disappearing from the oceans here. 
-Fisherman: Resulting in the lionfish population increasing because their natural enemies disappear. 
-Fisherman: Did you know that groupers are pretty much the only natural enemy of the lionfish in the caribbean?
-Menou: Wow, that’s a lot to process. I didn’t know that.
+Fisherman: I’m just doing my job. There are several kinds of fish I can tell you something about.
+[[Pierman.Default.Q1]]
 
--> Could you tell me more about the lionfish?
-    Fisherman: Yes of course, I’m just a fisherman, but I do suspect something major is going to happen if someone doesn’t do something quick. 
-    Fisherman: The coral devils are slowly taking over and they're booming in this part of the ocean.
--> How do you think the lionfish ended up in this part of the ocean?
-    Fisherman: A few years ago I remember overhearing a few college students that claimed these lionfish got sucked up in the ballast tanks of freighters. 
-    Fisherman: Although I don’t feel confident enough to make any more claims about that.
-Menou: Thanks for the information, I learned a lot from you. But I have to proceed with my investigation, have a nice day!
+===
+
+title: Pierman.Default.Q1
+---
+Menou: Can you tell me something about...
+-> groupers?
+    [[Pierman.Default.Groupers]]
+-> white grunt?
+    [[Pierman.Default.WhiteGrunt]]
+-> lionfish?
+    [[Pierman.Default.LionFish]]
+-> you know, nevermind. I have to proceed. Thanks for the talk.
+    [[Pierman.Default.End]]
+
+===
+
+title: Pierman.Default.Groupers
+---
+Fisherman: The groupers are one of the tastiest fish around here. I get a lot of money for them so they are my main focus.
+[[Pierman.Default.Q1]]
+===
+
+title: Pierman.Default.WhiteGrunt
+---
+Fisherman: Hmm nothing special… Not enough meat on the bones. 
+[[Pierman.Default.Q1]]
+===
+
+title: Pierman.Default.LionFish
+---
+Fisherman: Whoa, I’m not allowed to catch them. There are too many of them. I don’t understand why they are protected.
+[[Pierman.Default.Q1]]
+===
+
+title: Pierman.Default.End
+---
+Menou to herself: He looks like a cool dude to chill with, but didn’t have much to say.
 ===
 
 title: PierMan.FishingBan
 ---
-Menou: How has work been?
+Menou: so… how do you feel?
 Fisherman: If you think this means I will stop fishing for groupers you're wrong.
-Menou: Why the strong desire?
-Fisherman: The groupers are the most valuable fish around here, entire villages thrive on those fish. 
-Fisherman: We won't have any income if we stop fishing for them.
+Menou: why? a ban is a ban right?
+Fisherman: The groupers are the most valuable fish around here, entire villages thrive on those fish. We won't have any income if we stop fishing for them.
+Menou: So you don’t care about the lionfish?
+Fisherman: I feel like you did your research with your eyes closed if you think this is the best solution!
+Menou: I’m sorry, I was just trying to help.
+
 ===
 
 title: PierMan.LionFishing
@@ -46,13 +77,24 @@ Menou: what do you think about lionfish hunting?
 Fisherman: I mean, you can't really fish them. You need to get down there with a scuba suit and a spear gun. 
 Fisherman: But I'm glad they will stop eating the other fish. Meaning more fish for me.
 Menou: That seems logical, but you probably know some people that hunt them then?
-Fisherman: Yes I do, my brother hunts them, he gives scuba hunting excursions, for divers who want to help get rid of this invasive species.
+Fisherman: Yes I do actually, my brother hunts them, he gives scuba hunting excursions, for divers who want to help get rid of this invasive species.
+Menou: That sounds like he also makes a little profit because of his excursion. Well, take care!
+
 ===
 
 title: PierMan.Filters
 ---
-Menou: how do you feel about the filters?
-Fisherman: To be honest, I couldn't care less. 
-Fisherman: Although the fish that get caught and killed in these filters are the perfect bait for larger fish to show up. 
-Fisherman: I would have preferred a long term solution. But this seems to work for now.
+-> What's up!
+-> How are you hanging?
+-> Hi there.
+Fisherman: Oy, Menou! How are you doing?
+Menou: I’m good. Did you notice any differences?
+Fisherman: What are you talking about? I’m still here. Just doing my job, you know.
+Menou: Well, everything going on with these filters. I thought you might have noticed. 
+Fisherman: To be honest, I couldn't care less. Except for the bloody fish that get stuck in the filters. They attract some new fish. Bigger catch for me!
+->You always seem so relaxed about everything
+->I was afraid everyone would be mad at me
+Fisherman: Don’t take life too seriously.
+Menou to herself: I still feel like this wasn’t the best solution.
+
 ===

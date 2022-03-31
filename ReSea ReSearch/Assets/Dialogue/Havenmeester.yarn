@@ -16,39 +16,86 @@ title: Havenmeester.Default
 tags:
 ---
 Menou: Hey, can I ask you some questions? 
-Menou: Do you feel like things have changed around the oceans these past years?
-Port Employee: What do you mean? 
-Port Employee: We keep getting bigger and bigger freighters coming into the port, along with a bunch of those giant cruise ships. 
-Port Employee: But I don’t know if that is what you meant?
-Menou: That doesn’t seem like it’s out of the ordinary, but did you happen to notice anything else?
-Port Employee: I did hear some friends of mine say they spotted an unusual amount of lionfish while diving, but I doubt it’s related to your research.
-
+Port employee: Of course you can, girl.
+->Do you feel like things have changed around the oceans these past years?
+    Port employee: Well, for the past years more and more container ships are coming into the port. But is that what you are looking for?
+    Menou: That doesn’t seem like it’s out of the ordinary, but did you happen to notice anything else?
+->Where did you get these cool shoes?
+    Port employee: Thanks, I got them in this thrift shop.
+    Menou: Cool, I love thrift shopping. But that’s not what I’m here for. Could you maybe tell me whether there have been changes lately?
+    Port employee: Well, for the past years more and more container ships are coming into the port. But is that what you are looking for?
+    Menou: That doesn’t seem like it’s out of the ordinary, but did you happen to notice anything else? 
+Port employee: I did hear some friends of mine say they spotted an unusual amount of lionfish while diving, but I doubt it’s related to your research.
+-> I still need to talk to a lot of people so I think that’s it for now. Thank you.
+    [[Havenmeester.Default.End]]
+-> Is it okay if I ask you some more questions? Only if you have time.
+Port employee: Well, I already told you that we’ve been busy with these container ships but less tourists boats are arriving because of these stinging lionfish. Go ahead.
 -> Could you tell me more about these lionfish?
-    Port Employee: Yeah Sure, They’re a protected species of fish, and they have only been around for a few years.
--> Did your fisher friends say anything else about these fish?
-    Port Employee: Not really, although I do remember a friend of mine rambling about the fish getting caught in their fishing nets, and that they’re a real pain in the ass to get unstuck from the nets. 
-    Port Employee: And since you can’t legally catch them, they’re just terrible for the fishing industry.
-Menou: Thanks for the info, I think this may be useful.
+    Port employee: Yeah Sure, They’re a protected species of fish, and they have only been around for a few years.
+-> Why are there more container ships arriving?
+    Port employee: That’s what is happening all over the world. Due to globalization there are more international trade routes.
+-> Why are there less tourists arriving?
+    Port Employee: Well they don’t like these new lionfish. They look cool but they sting. 
+    Port Employee: Also the coral reefs are less stunning. I think the ecosystem is in disbalance.
+Menou: That is very interesting.
+-> I still need to talk to a lot of people so I think that’s it for now. Thank you.
+    [[Havenmeester.Default.End]]
+-> Is it okay if I ask you some more questions? Only if you have time.
+No problem go ahead
+-> Could you tell me more about these lionfish?
+    Port employee: Yeah Sure, They’re a protected species of fish, and they have only been around for a few years.
+-> Why are there more container ships arriving?
+    Port employee: That’s what is happening all over the world. Due to globalization there are more international trade routes.
+-> Why are there less tourists arriving?
+    Port Employee: Well they don’t like these new lionfish. They look cool but they sting. 
+    Port Employee: Also the coral reefs are less stunning. I think the ecosystem is in disbalance.
+Menou to herself: Wow, I didn’t know the financial industry was this dependent on a ecological problem
+===
+
+title: Havenmeester.Default.End
+---
+Menou to herself: Wow, I didn’t know the financial industry was this dependent on a ecological problem.
 ===
 
 title: Havenmeester.FishingBan
 ---
 Menou: How do you feel about the fishing ban
 Port Employee: A lot of fishing boats started moving to different parts of the island, meaning I’m losing money I would’ve made renting out harbor space for the boats.
+Menou: So you don’t care about the lionfish population decreasing?
+Port Employee: Why would I care about a stupid fish if I can barely feed my own children? You’re useless.
+Menou: I’m sorry, I feel like I made a mistake. I should go now. 
+
 ===
 
 title: Havenmeester.LionFishing
 ---
-Menou: How do you feel about the hunting on lionfish?
+Menou: How do you feel about the hunting of lionfish?
 Port Employee: Friends of mine actually hunt on them, they do make for a good beach barbecue.
+Menou: Aren’t they toxic?
+Port Employee: Not if you cook 'em right. And my misses happens to prepare the best lionfish meals in the whole caribbean. You should join us sometime.
+Menou: I would have loved too, but I’m afraid I have other duties to fulfill.
+Port Employee: Too bad, well, take care. you have been a true savior for all of us.
+
 ===
 
 title: Havenmeester.Filters
 ---
 Menou: Hey, How are you doing?
-Port Employee: Are you stupid? Do you have any idea how often these filters get clogged with fish? 
-Port Employee: The amount of fish that get ripped to pieces by these filters? And the delays the replacement of the filters cause?
-Menou: I’m so sorry to hear that.
-Port Employee: I bet you do. Stupid climate freaks. Just let us do our job.
+Port employee: Are you stupid? Do you have any idea how often these filters get clogged with fish? 
+Port employee: The amount of fish that get ripped to pieces by these filters? And the delays the replacement of the filters cause?
+->I’m so sorry to hear that.
+    Port employee: I bet you do. Stupid climate freaks. Just let us do our job.
+    -> Enough, I’m also trying to do my job.
+    -> Well your work doesn't do any good for this ecosystem.
+        Port employee: I’m the problem? Without my business we would still be collecting berries in the woods! 
+        Port employee: You’re the most rude researcher I have ever encountered. 
+
+->I don’t like it when you talk to me like that.
+    Port employee:  I don’t like it when you *** with my business like that.
+    ->Enough, I’m also trying to do my job.
+    ->Well your business started this problem in the first place.
+        Port employee: I’m the problem? Without my business we would still be collecting berries in the woods! 
+        Port employee: You’re the most rude researcher I have ever encountered. 
+        
 ===
 

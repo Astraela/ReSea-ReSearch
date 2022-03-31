@@ -1,33 +1,138 @@
 ﻿title: IntroScene
 tags:
 ---
-You must be Menou, our new team member. Welcome newbie!
--> Thank you!
--> Yup, that's me!
-The best way to understand what we are doing is to just dive right into it. 
-You seem like a brainy woman to me, so let’s just get started.
-We are working on this case in the Caribbean reefs.
-We are currently facing a degradation of the ecological system at the reefs.
-Huge problem of course.
-This is probably driven by the disturbance of the ecological balance.
-We’re suspecting involvement of human behaviour.
--> That doesn't sound good.
-    We agree.
--> Cleaning up for other people once again.
-    Well let's figure out who those other people are first.
-It is your job to find out what has changed in the past years.
-We need to find a solution but it will be hard to keep all the parties involved happy.
-That’s the hardest part we have to deal with as researchers.
-Finding the best solution for these damn complex problems.
--> Okay okay, such a responsibility. Sounds exciting!
-    Glad you are excited to begin work.
--> Time to figure out who did this.
-    There are a lot of parties involved so that will be a challenge.
-Let’s start with talking with all the different people involved, and understand the problem. 
-You will be able to act whenever you think you understand the problem and have the right solution.
-Just make sure you never act too rapidly.
--> Yes boss!
--> This will be easy.
+<<if getState() == "default">>
+    [[IntroScene.Default]]
+<<elseif getState() == "FishingBan">>
+    [[IntroScene.FishingBan]]
+<<elseif getState() == "LionFishing">>
+    [[IntroScene.LionFishing]]
+<<elseif getState() == "Filters">>
+    [[IntroScene.Filters]]
+<<endif>>
+===
+
+title: IntroScene.Default
+---
+Menou: Hi! My name is Menou.
+Jack: Ahh, our new team member. Welcome newbie!
+-> This is my first day working as a researcher. I don’t know what to expect.
+    Jack: You seem a bit nervous, don’t worry. The best way to understand what we are doing is to just dive right into it. 
+    Jack: We are working on this case in the Caribbean reefs. 
+    Jack: We are currently facing a degradation of the ecological system at the reefs. Huge problem of course. 
+    Jack: This is probably driven by the disturbance of the ecological balance. We’re suspecting involvement of human behavior.
+-> I’m super hyped for today. You can probably tell all about it.
+    Jack: Of course I can. The best way to understand what we are doing is to just dive right into it. 
+    Jack: You seem like a brainy woman to me, so let’s just get started. 
+    Jack: We are working on this case in the Caribbean reefs. 
+    Jack: We are currently facing a degradation of the ecological system at the reefs. Huge problem of course. 
+    Jack: This is probably driven by the disturbance of the ecological balance. We’re suspecting involvement of human behavior.
+Menou: Hmmm.
+-> Typical… and we need to clean up the mess?
+    Jack: Whoa, already giving up? It is your job to find out what has changed in the past years. 
+    Jack: We need to find a solution but it will be hard to keep all the parties involved happy. 
+    Jack: That’s the hardest part we have to deal with as researchers. Finding the best solution for these damn complex problems.
+-> We should dive right into it!
+    Jack: That’s the spirit. It is your job to find out what has changed in the past years.
+    Jack: We need to find a solution but it will be hard to keep all the parties involved happy.
+    Jack: That’s the hardest part we have to deal with as researchers. Finding the best solution for these damn complex problems.
+Menou: Alright.
+-> Sounds exciting!
+-> Not sure if I can do this...
+[[IntroScene.Default.Q1]]
+
+===
+
+title: IntroScene.Default.Q1
+---
+Jack: Do you still have questions?
+-> Yes, what will the office look like?
+    [[IntroScene.Default.Office]]
+-> Yes, do we also have to do any actions?
+    [[IntroScene.Default.Actions]]
+-> No, I think I will figure it out by myself.
 <<wait 1.5>>
 <<call scene(3)>>
+
+===
+title: IntroScene.Default.Office
+---
+Jack: Well our office is quite dope, on a boat. 
+Jack: You will find a map with different locations to explore and we have some diving suits available for when you want to get into the water. 
+[[IntroScene.Default.Q1]]
+
+===
+title: IntroScene.Default.Actions
+---
+Jack: Let’s start with talking with all the different people involved, and understand the problem.
+Jack: You will be able to act whenever you think you understand the problem and have the right solution. 
+Jack: Just make sure you never act too rapidly.
+[[IntroScene.Default.Q1]]
+
+===
+
+title: IntroScene.FishingBan
+---
+Jack: Interesting choice. However, I do not think this was the most efficient option. 
+Jack: Talk to the involved parties to see how this affected them.
+<<wait 1.5>>
+<<call scene(3)>>
+
+===
+title: IntroScene.LionFishing
+---
+Jack: Ahh, there you are. Good job! You acted as a real professional. 
+Jack: Please know that not everyone will react positively to what you have changed, but know that you did the right thing. 
+Jack: As I told you, keeping all parties happy is impossible. 
+Jack: Always aim for the best option and try to take as many factors into account as possible. 
+Jack: We rather act and change a bit more in the positive direction than do nothing.
+-> Thank you! I feel like everybody agrees, except for the lionfish, ofcourse.
+-> I’m nervous for all the reactions.
+Jack: You can’t satisfy everyone’s needs. Always look for the bigger picture. 
+Jack: Even if it means that certain parties have to make a sacrifice, because of a decision you made.
+[[IntroScene.LionFishing.Q1]]
+
+===
+title: IntroScene.LionFishing.Q1
+---
+Jack: If you would like to know more about the impact your decision made, this is the time to ask.
+-> How did my action have a positive impact on the ecological aspects?
+    [[IntroScene.LionFishing.Ecological]]
+-> How did my action have a positive impact on the financial aspects?
+    [[IntroScene.LionFishing.Financial]]
+-> How did my action have a positive impact on the cultural aspects?
+    [[IntroScene.LionFishing.Cultural]]
+-> I know enough, thanks for the experience.
+Jack: We will definitely need you in the future. 
+Jack: Get some rest and you will hear from me when there are new cases to work on. 
+Jack: The world has enough dilemma’s to encounter.
+<<wait 1.5>>
+<<call scene(3)>>
+
+===
+title: IntroScene.LionFishing.Ecological
+---
+Jack: The ecological system found its balance again. We can see a bloom of the coral reefs and steady population sizes.
+[[IntroScene.Lionfishing.Q1]]
+
+===
+title: IntroScene.LionFishing.Financial
+---
+Jack: The fishing of lionfish opened up a completely new market. The catches are used not only for food but also for jewelry.
+[[IntroScene.Lionfishing.Q1]]
+
+===
+title: IntroScene.LionFishing.Cultural
+---
+Jack: By regaining a steady ecological system, we can maintain a beautiful and attractive sight for everyone who loves to enjoy nature at its best.
+[[IntroScene.Lionfishing.Q1]]
+
+===
+title: IntroScene.Filters
+---
+Jack: Interesting choice. However, I do not think this was the most efficient option. 
+Jack: Talk to the involved parties to see how this affected them.
+<<wait 1.5>>
+<<call scene(3)>>
+
 ===
